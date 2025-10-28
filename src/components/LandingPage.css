@@ -1,0 +1,152 @@
+/* Landing Page Styles */
+/* Beautiful homepage design with modern UI elements */
+
+.landing-page {
+  min-height: 100vh;           /* Full viewport height */
+  display: flex;               /* Flexbox layout */
+  flex-direction: column;       /* Stack sections vertically */
+}
+
+/* Header section with airline branding */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* Beautiful gradient */
+  color: white;                /* White text */
+  padding: 20px 0;             /* Vertical padding */
+  text-align: center;          /* Center content */
+}
+
+.logo {
+  font-size: 3rem;             /* Large logo text */
+  font-weight: bold;           /* Bold font weight */
+  margin-bottom: 10px;         /* Space below logo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* Text shadow for depth */
+}
+
+.tagline {
+  font-size: 1.2rem;           /* Medium tagline text */
+  opacity: 0.9;                /* Slightly transparent */
+  font-weight: 300;            /* Light font weight */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;                     /* Take remaining space */
+  padding: 60px 0;             /* Vertical padding */
+}
+
+/* Hero section - main call-to-action area */
+.hero {
+  text-align: center;          /* Center content */
+  margin-bottom: 80px;         /* Space below hero */
+}
+
+.hero-title {
+  font-size: 3.5rem;           /* Large title */
+  font-weight: 700;            /* Bold font weight */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 20px;         /* Space below title */
+  line-height: 1.2;            /* Tight line height */
+}
+
+.hero-description {
+  font-size: 1.3rem;           /* Medium description text */
+  color: #666;                 /* Medium gray */
+  max-width: 600px;            /* Limit width for readability */
+  margin: 0 auto 40px;         /* Center and add bottom margin */
+  line-height: 1.6;            /* Comfortable line height */
+}
+
+/* Main search button */
+.search-flights-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);  /* Red gradient */
+  color: white;                /* White text */
+  font-size: 1.3rem;           /* Large button text */
+  font-weight: 600;            /* Bold font weight */
+  padding: 18px 40px;           /* Generous padding */
+  border-radius: 50px;          /* Fully rounded */
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);  /* Colored shadow */
+  transition: all 0.3s ease;   /* Smooth transitions */
+}
+
+.search-flights-btn:hover {
+  transform: translateY(-3px);  /* Lift effect */
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);  /* Enhanced shadow */
+}
+
+/* Features section */
+.features {
+  display: grid;               /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Responsive grid */
+  gap: 40px;                   /* Space between cards */
+  margin-top: 60px;            /* Space above features */
+}
+
+.feature-card {
+  background: white;            /* White background */
+  padding: 40px 30px;          /* Generous padding */
+  border-radius: 15px;         /* Rounded corners */
+  text-align: center;          /* Center content */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: transform 0.3s ease;  /* Smooth transform */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);  /* Lift effect on hover */
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;           /* Medium heading */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 15px;         /* Space below heading */
+  font-weight: 600;            /* Semi-bold */
+}
+
+.feature-card p {
+  color: #666;                 /* Medium gray */
+  font-size: 1rem;             /* Regular text size */
+  line-height: 1.5;            /* Comfortable line height */
+}
+
+/* Footer */
+.footer {
+  background-color: #2c3e50;   /* Dark background */
+  color: white;                /* White text */
+  text-align: center;          /* Center content */
+  padding: 30px 0;             /* Vertical padding */
+  margin-top: auto;            /* Push to bottom */
+}
+
+.footer p {
+  opacity: 0.8;                /* Slightly transparent */
+  font-size: 0.9rem;           /* Small text */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.5rem;         /* Smaller logo on mobile */
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;         /* Smaller title on mobile */
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;         /* Smaller description on mobile */
+    padding: 0 20px;           /* Add horizontal padding */
+  }
+  
+  .search-flights-btn {
+    font-size: 1.1rem;         /* Smaller button text on mobile */
+    padding: 15px 30px;        /* Less padding on mobile */
+  }
+  
+  .features {
+    grid-template-columns: 1fr;  /* Single column on mobile */
+    gap: 30px;                 /* Less gap on mobile */
+  }
+  
+  .feature-card {
+    padding: 30px 20px;        /* Less padding on mobile */
+  }
+}

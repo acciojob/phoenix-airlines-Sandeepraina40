@@ -1,0 +1,221 @@
+/* Flight Search Page Styles */
+/* Clean, functional design for flight search interface */
+
+.flight-search {
+  min-height: 100vh;           /* Full viewport height */
+  background-color: #f8f9fa;   /* Light gray background */
+  padding: 20px 0;             /* Vertical padding */
+}
+
+/* Search page header */
+.search-header {
+  display: flex;               /* Flexbox layout */
+  justify-content: space-between;  /* Space between title and back button */
+  align-items: center;         /* Center vertically */
+  margin-bottom: 40px;         /* Space below header */
+  padding: 20px 0;             /* Vertical padding */
+}
+
+.search-header h1 {
+  font-size: 2.5rem;           /* Large title */
+  color: #2c3e50;              /* Dark blue-gray */
+  font-weight: 700;            /* Bold font weight */
+}
+
+.back-btn {
+  background-color: #6c757d;   /* Gray background */
+  color: white;                /* White text */
+  padding: 10px 20px;          /* Comfortable padding */
+  border-radius: 25px;         /* Rounded corners */
+  font-size: 1rem;             /* Regular text size */
+  transition: all 0.3s ease;  /* Smooth transitions */
+}
+
+.back-btn:hover {
+  background-color: #5a6268;   /* Darker gray on hover */
+  transform: translateX(-3px); /* Move left slightly */
+}
+
+/* Search form styling */
+.search-form {
+  background: white;            /* White background */
+  padding: 40px;               /* Generous padding */
+  border-radius: 15px;         /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  margin-bottom: 40px;         /* Space below form */
+}
+
+/* Trip type buttons */
+.trip-type-buttons {
+  display: flex;               /* Flexbox layout */
+  gap: 10px;                   /* Space between buttons */
+  margin-top: 10px;            /* Space above buttons */
+}
+
+.trip-btn {
+  flex: 1;                     /* Equal width buttons */
+  padding: 12px 20px;          /* Comfortable padding */
+  border: 2px solid #e1e5e9;   /* Light border */
+  background-color: white;     /* White background */
+  color: #666;                 /* Gray text */
+  border-radius: 8px;          /* Rounded corners */
+  font-weight: 500;            /* Medium font weight */
+  transition: all 0.3s ease;   /* Smooth transitions */
+}
+
+.trip-btn.active {
+  background-color: #007bff;   /* Blue background */
+  color: white;                /* White text */
+  border-color: #007bff;       /* Blue border */
+}
+
+.trip-btn:hover:not(.active) {
+  border-color: #007bff;       /* Blue border on hover */
+  color: #007bff;              /* Blue text on hover */
+}
+
+/* Search button */
+.search-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);  /* Blue gradient */
+  color: white;                /* White text */
+  font-size: 1.2rem;           /* Large button text */
+  font-weight: 600;            /* Bold font weight */
+  padding: 15px 40px;          /* Generous padding */
+  border-radius: 8px;          /* Rounded corners */
+  width: 100%;                 /* Full width */
+  margin-top: 20px;            /* Space above button */
+  transition: all 0.3s ease;  /* Smooth transitions */
+}
+
+.search-btn:hover:not(:disabled) {
+  transform: translateY(-2px);  /* Lift effect */
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);  /* Blue shadow */
+}
+
+.search-btn:disabled {
+  background: #6c757d;         /* Gray background when disabled */
+  cursor: not-allowed;         /* Not-allowed cursor */
+}
+
+/* Search results section */
+.search-results {
+  background: white;            /* White background */
+  padding: 30px;               /* Generous padding */
+  border-radius: 15px;         /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.search-results h2 {
+  font-size: 2rem;             /* Large heading */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 30px;         /* Space below heading */
+  font-weight: 600;            /* Semi-bold */
+}
+
+/* Flights list */
+.flights-list {
+  display: flex;               /* Flexbox layout */
+  flex-direction: column;       /* Stack vertically */
+  gap: 20px;                   /* Space between flight cards */
+}
+
+/* Individual flight card */
+.flight-card {
+  display: flex;               /* Flexbox layout */
+  justify-content: space-between;  /* Space between info and price */
+  align-items: center;         /* Center vertically */
+  padding: 25px;               /* Generous padding */
+  border: 2px solid #e1e5e9;   /* Light border */
+  border-radius: 12px;         /* Rounded corners */
+  transition: all 0.3s ease;  /* Smooth transitions */
+}
+
+.flight-card:hover {
+  border-color: #007bff;       /* Blue border on hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);  /* Subtle blue shadow */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Flight information */
+.flight-info h3 {
+  font-size: 1.3rem;           /* Medium heading */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 8px;           /* Space below heading */
+  font-weight: 600;            /* Semi-bold */
+}
+
+.flight-info p {
+  color: #666;                 /* Medium gray */
+  margin-bottom: 5px;           /* Space below each line */
+  font-size: 0.95rem;          /* Slightly smaller text */
+}
+
+/* Flight price section */
+.flight-price {
+  text-align: right;           /* Right-align price */
+}
+
+.price {
+  display: block;              /* Block-level element */
+  font-size: 1.8rem;           /* Large price text */
+  font-weight: 700;            /* Bold font weight */
+  color: #28a745;              /* Green color for price */
+  margin-bottom: 15px;         /* Space below price */
+}
+
+/* Book flight button */
+.book-flight {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);  /* Green gradient */
+  color: white;                /* White text */
+  padding: 12px 25px;          /* Comfortable padding */
+  border-radius: 8px;          /* Rounded corners */
+  font-weight: 600;            /* Bold font weight */
+  transition: all 0.3s ease;   /* Smooth transitions */
+}
+
+.book-flight:hover {
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);  /* Green shadow */
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #f8d7da;   /* Light red background */
+  color: #721c24;              /* Dark red text */
+  padding: 15px 20px;          /* Comfortable padding */
+  border-radius: 8px;          /* Rounded corners */
+  margin: 20px 0;              /* Vertical margin */
+  border: 1px solid #f5c6cb;   /* Light red border */
+  font-weight: 500;            /* Medium font weight */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .search-header {
+    flex-direction: column;     /* Stack vertically on mobile */
+    gap: 20px;                 /* Space between elements */
+    text-align: center;        /* Center content */
+  }
+  
+  .search-header h1 {
+    font-size: 2rem;           /* Smaller title on mobile */
+  }
+  
+  .search-form {
+    padding: 25px;             /* Less padding on mobile */
+  }
+  
+  .flight-card {
+    flex-direction: column;    /* Stack vertically on mobile */
+    text-align: center;        /* Center content */
+    gap: 20px;                 /* Space between sections */
+  }
+  
+  .flight-price {
+    text-align: center;        /* Center price on mobile */
+  }
+  
+  .trip-type-buttons {
+    flex-direction: column;    /* Stack buttons vertically on mobile */
+  }
+}

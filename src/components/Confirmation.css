@@ -1,0 +1,263 @@
+/* Confirmation Page Styles */
+/* Celebration-style design for booking confirmation */
+
+.confirmation {
+  min-height: 100vh;           /* Full viewport height */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* Beautiful gradient */
+  padding: 20px 0;             /* Vertical padding */
+}
+
+/* Confirmation header with success icon */
+.confirmation-header {
+  text-align: center;          /* Center content */
+  margin-bottom: 50px;         /* Space below header */
+  padding: 40px 0;             /* Vertical padding */
+}
+
+.success-icon {
+  width: 80px;                 /* Large icon size */
+  height: 80px;                /* Large icon size */
+  background-color: #28a745;   /* Green background */
+  color: white;                /* White checkmark */
+  border-radius: 50%;          /* Circular shape */
+  display: flex;               /* Flexbox for centering */
+  align-items: center;         /* Center vertically */
+  justify-content: center;     /* Center horizontally */
+  font-size: 2.5rem;           /* Large checkmark */
+  font-weight: bold;           /* Bold checkmark */
+  margin: 0 auto 20px;         /* Center and add bottom margin */
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);  /* Green shadow */
+  animation: bounceIn 0.6s ease-out;  /* Bounce animation */
+}
+
+.confirmation-header h1 {
+  font-size: 3rem;             /* Large title */
+  color: white;                /* White text */
+  font-weight: 700;            /* Bold font weight */
+  margin-bottom: 15px;         /* Space below title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* Text shadow */
+}
+
+.confirmation-header p {
+  font-size: 1.3rem;           /* Medium description */
+  color: rgba(255, 255, 255, 0.9);  /* Semi-transparent white */
+  font-weight: 300;            /* Light font weight */
+}
+
+/* Booking details section */
+.booking-details {
+  background: white;            /* White background */
+  padding: 40px;               /* Generous padding */
+  border-radius: 20px;         /* Rounded corners */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);  /* Strong shadow */
+  margin-bottom: 40px;         /* Space below details */
+}
+
+.details-section {
+  margin-bottom: 40px;         /* Space between sections */
+}
+
+.details-section:last-child {
+  margin-bottom: 0;            /* Remove margin from last section */
+}
+
+.details-section h2 {
+  font-size: 1.8rem;           /* Large heading */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 25px;         /* Space below heading */
+  font-weight: 600;            /* Semi-bold */
+  border-bottom: 3px solid #007bff;  /* Blue underline */
+  padding-bottom: 10px;        /* Space above underline */
+}
+
+.detail-item {
+  display: flex;               /* Flexbox layout */
+  justify-content: space-between;  /* Space between label and value */
+  align-items: center;         /* Center vertically */
+  padding: 15px 0;             /* Vertical padding */
+  border-bottom: 1px solid #e1e5e9;  /* Light border */
+}
+
+.detail-item:last-child {
+  border-bottom: none;         /* Remove border from last item */
+}
+
+.detail-item .label {
+  font-weight: 600;            /* Semi-bold label */
+  color: #555;                 /* Medium gray */
+  font-size: 1rem;             /* Regular text size */
+}
+
+.detail-item .value {
+  font-weight: 500;            /* Medium font weight */
+  color: #2c3e50;              /* Dark blue-gray */
+  font-size: 1rem;             /* Regular text size */
+  text-align: right;           /* Right-align values */
+}
+
+/* Important information section */
+.important-info {
+  background: rgba(255, 255, 255, 0.95);  /* Semi-transparent white */
+  padding: 30px;               /* Generous padding */
+  border-radius: 15px;         /* Rounded corners */
+  margin-bottom: 40px;         /* Space below section */
+  backdrop-filter: blur(10px);  /* Blur effect */
+}
+
+.important-info h3 {
+  font-size: 1.5rem;           /* Medium heading */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 20px;         /* Space below heading */
+  font-weight: 600;            /* Semi-bold */
+}
+
+.important-info ul {
+  list-style: none;            /* Remove default bullets */
+  padding: 0;                  /* Remove default padding */
+}
+
+.important-info li {
+  padding: 10px 0;             /* Vertical padding */
+  color: #555;                 /* Medium gray */
+  font-size: 1rem;             /* Regular text size */
+  line-height: 1.5;            /* Comfortable line height */
+  position: relative;          /* For custom bullet */
+  padding-left: 25px;          /* Space for custom bullet */
+}
+
+.important-info li::before {
+  content: "✓";                /* Checkmark bullet */
+  color: #28a745;              /* Green checkmark */
+  font-weight: bold;           /* Bold checkmark */
+  position: absolute;           /* Absolute positioning */
+  left: 0;                     /* Align to left */
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;               /* Flexbox layout */
+  gap: 20px;                   /* Space between buttons */
+  justify-content: center;     /* Center buttons */
+  margin-bottom: 40px;         /* Space below buttons */
+}
+
+.return-home-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);  /* Blue gradient */
+  color: white;                /* White text */
+  font-size: 1.2rem;           /* Large button text */
+  font-weight: 600;            /* Bold font weight */
+  padding: 15px 30px;          /* Generous padding */
+  border-radius: 10px;         /* Rounded corners */
+  transition: all 0.3s ease;   /* Smooth transitions */
+}
+
+.return-home-btn:hover {
+  transform: translateY(-3px);  /* Lift effect */
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);  /* Blue shadow */
+}
+
+.print-btn {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);  /* Gray gradient */
+  color: white;                /* White text */
+  font-size: 1.2rem;           /* Large button text */
+  font-weight: 600;            /* Bold font weight */
+  padding: 15px 30px;          /* Generous padding */
+  border-radius: 10px;         /* Rounded corners */
+  transition: all 0.3s ease;   /* Smooth transitions */
+}
+
+.print-btn:hover {
+  transform: translateY(-3px);  /* Lift effect */
+  box-shadow: 0 10px 30px rgba(108, 117, 125, 0.3);  /* Gray shadow */
+}
+
+/* Contact information */
+.contact-info {
+  background: rgba(255, 255, 255, 0.9);  /* Semi-transparent white */
+  padding: 30px;               /* Generous padding */
+  border-radius: 15px;         /* Rounded corners */
+  text-align: center;          /* Center content */
+  backdrop-filter: blur(10px);  /* Blur effect */
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;           /* Medium heading */
+  color: #2c3e50;              /* Dark blue-gray */
+  margin-bottom: 20px;         /* Space below heading */
+  font-weight: 600;            /* Semi-bold */
+}
+
+.contact-info p {
+  color: #555;                 /* Medium gray */
+  font-size: 1rem;             /* Regular text size */
+  margin-bottom: 10px;          /* Space below each line */
+  line-height: 1.5;            /* Comfortable line height */
+}
+
+/* Bounce animation for success icon */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .confirmation-header h1 {
+    font-size: 2.5rem;         /* Smaller title on mobile */
+  }
+  
+  .confirmation-header p {
+    font-size: 1.1rem;         /* Smaller description on mobile */
+  }
+  
+  .success-icon {
+    width: 60px;                /* Smaller icon on mobile */
+    height: 60px;              /* Smaller icon on mobile */
+    font-size: 2rem;           /* Smaller checkmark on mobile */
+  }
+  
+  .booking-details {
+    padding: 25px;             /* Less padding on mobile */
+  }
+  
+  .details-section h2 {
+    font-size: 1.5rem;         /* Smaller headings on mobile */
+  }
+  
+  .detail-item {
+    flex-direction: column;     /* Stack vertically on mobile */
+    align-items: flex-start;    /* Align to left */
+    gap: 5px;                   /* Small gap between label and value */
+  }
+  
+  .detail-item .value {
+    text-align: left;          /* Left-align values on mobile */
+  }
+  
+  .action-buttons {
+    flex-direction: column;     /* Stack buttons vertically on mobile */
+    gap: 15px;                 /* Less gap on mobile */
+  }
+  
+  .return-home-btn,
+  .print-btn {
+    width: 100%;               /* Full width buttons on mobile */
+  }
+  
+  .important-info,
+  .contact-info {
+    padding: 20px;             /* Less padding on mobile */
+  }
+}

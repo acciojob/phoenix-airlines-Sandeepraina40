@@ -1,1 +1,144 @@
+/* Global styles for the entire application */
+/* These styles apply to all components unless overridden */
 
+/* Reset default browser styles */
+* {
+  margin: 0;                    /* Remove default margins */
+  padding: 0;                   /* Remove default padding */
+  box-sizing: border-box;       /* Include padding and border in element's total width and height */
+}
+
+/* Set base font and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Modern, readable font */
+  line-height: 1.6;            /* Better readability */
+  color: #333;                 /* Dark gray text color */
+  background-color: #f8f9fa;   /* Light gray background */
+}
+
+/* Main app container */
+.app {
+  min-height: 100vh;           /* Full viewport height */
+  display: flex;               /* Flexbox layout */
+  flex-direction: column;      /* Stack children vertically */
+}
+
+/* Container for centering content */
+.container {
+  max-width: 1200px;           /* Maximum width */
+  margin: 0 auto;              /* Center horizontally */
+  padding: 0 20px;             /* Add horizontal padding */
+}
+
+/* Button base styles */
+button {
+  cursor: pointer;             /* Show pointer cursor on hover */
+  border: none;                /* Remove default border */
+  border-radius: 8px;          /* Rounded corners */
+  font-size: 16px;             /* Readable font size */
+  font-weight: 500;            /* Medium font weight */
+  transition: all 0.3s ease;  /* Smooth transitions */
+  padding: 12px 24px;          /* Comfortable padding */
+}
+
+/* Button hover effects */
+button:hover {
+  transform: translateY(-2px);  /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Subtle shadow */
+}
+
+/* Button disabled state */
+button:disabled {
+  opacity: 0.6;                /* Make disabled buttons semi-transparent */
+  cursor: not-allowed;         /* Show not-allowed cursor */
+  transform: none;             /* Remove hover effects */
+}
+
+/* Form input styles */
+input, select, textarea {
+  width: 100%;                 /* Full width */
+  padding: 12px 16px;          /* Comfortable padding */
+  border: 2px solid #e1e5e9;   /* Light border */
+  border-radius: 8px;          /* Rounded corners */
+  font-size: 16px;             /* Readable font size */
+  transition: border-color 0.3s ease;  /* Smooth border transition */
+}
+
+/* Input focus state */
+input:focus, select:focus, textarea:focus {
+  outline: none;               /* Remove default outline */
+  border-color: #007bff;       /* Blue border on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);  /* Subtle blue glow */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;          /* Space between form groups */
+}
+
+.form-group label {
+  display: block;              /* Block-level label */
+  margin-bottom: 8px;          /* Space below label */
+  font-weight: 500;            /* Medium font weight */
+  color: #555;                 /* Darker gray for labels */
+}
+
+/* Form row for side-by-side inputs */
+.form-row {
+  display: grid;               /* Grid layout */
+  grid-template-columns: 1fr 1fr;  /* Two equal columns */
+  gap: 20px;                   /* Space between columns */
+}
+
+/* Responsive design - adjust for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;           /* Less padding on mobile */
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;  /* Single column on mobile */
+    gap: 15px;                 /* Less gap on mobile */
+  }
+  
+  button {
+    width: 100%;               /* Full width buttons on mobile */
+    margin-bottom: 10px;       /* Space between buttons */
+  }
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #f8d7da;   /* Light red background */
+  color: #721c24;              /* Dark red text */
+  padding: 12px 16px;          /* Comfortable padding */
+  border-radius: 8px;          /* Rounded corners */
+  margin: 20px 0;              /* Vertical margin */
+  border: 1px solid #f5c6cb;   /* Light red border */
+}
+
+/* Success message styling */
+.success-message {
+  background-color: #d4edda;   /* Light green background */
+  color: #155724;             /* Dark green text */
+  padding: 12px 16px;         /* Comfortable padding */
+  border-radius: 8px;         /* Rounded corners */
+  margin: 20px 0;             /* Vertical margin */
+  border: 1px solid #c3e6cb;  /* Light green border */
+}
