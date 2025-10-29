@@ -163,21 +163,27 @@ const FlightSearch = () => {
           {/* Trip Type Selection */}
           <div className="form-group">
             <label>Trip Type:</label>
-            <div className="trip-type-buttons">
-              <button
-                type="button"
-                className={`trip-btn ${formData.tripType === 'one-way' ? 'active' : ''}`}
-                onClick={() => setFormData(prev => ({ ...prev, tripType: 'one-way' }))}
-              >
+            <div className="trip-type-options">
+              <label>
+                <input
+                  type="radio"
+                  name="tripType"
+                  value="one-way"
+                  checked={formData.tripType === 'one-way'}
+                  onChange={handleInputChange}
+                />
                 One-way
-              </button>
-              <button
-                type="button"
-                className={`trip-btn ${formData.tripType === 'round-trip' ? 'active' : ''}`}
-                onClick={() => setFormData(prev => ({ ...prev, tripType: 'round-trip' }))}
-              >
+              </label>
+              <label style={{ marginLeft: '1rem' }}>
+                <input
+                  type="radio"
+                  name="tripType"
+                  value="round-trip"
+                  checked={formData.tripType === 'round-trip'}
+                  onChange={handleInputChange}
+                />
                 Round-trip
-              </button>
+              </label>
             </div>
           </div>
 
@@ -255,32 +261,34 @@ const FlightSearch = () => {
         )}
 
         {/* Search Results */}
-        {searchResults.length > 0 && (
-          <div className="search-results">
-            <h2>Available Flights</h2>
-            <div className="flights-list">
-              {searchResults.map(flight => (
-                <div key={flight.id} className="flight-card">
-                  <div className="flight-info">
-                    <h3>{flight.airline} - {flight.flightNumber}</h3>
-                    <p>{flight.source} → {flight.destination}</p>
-                    <p>Departure: {flight.departureTime} | Arrival: {flight.arrivalTime}</p>
-                    <p>Duration: {flight.duration}</p>
-                  </div>
-                  <div className="flight-price">
-                    <span className="price">${flight.price}</span>
-                    <button 
-                      className="book-flight"
-                      onClick={() => handleBookFlight(flight)}
-                    >
-                      Book Flight
-                    </button>
-                  </div>
+        <div className="search-results">
+          <h2>Available Flights</h2>
+          {/* Always render a UL for Cypress selectors */}
+          <ul className="flights-list">
+            {searchResults.map(flight => (
+              <li key={flight.id} className="flight-card">
+                <div className="flight-info">
+                  <h3>{flight.airline} - {flight.flightNumber}</h3>
+                  <p>{flight.source} → {flight.destination}</p>
+                  <p>Departure: {flight.departureTime} | Arrival: {flight.arrivalTime}</p>
+                  <p>Duration: {flight.duration}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+                <div className="flight-price">
+                  <span className="price">${flight.price}</span>
+                  <button 
+                    className="book-flight"
+                    onClick={() => handleBookFlight(flight)}
+                  >
+                    Book Flight
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          {searchResults.length === 0 && !isLoading && (
+            <p>No flights available</p>
+          )}
+        </div>
       </div>
     </div>
   );
