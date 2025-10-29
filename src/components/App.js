@@ -24,7 +24,7 @@ const App = () => {
       <Router>
         <div className="app">
           {/* Global App Title to satisfy test expectation */}
-          <h1 style={{ position: 'absolute', left: '-9999px' }}>Flight Booking App</h1>
+          <h1>Welcome to Flight Booking App</h1>
           {/* Switch ensures only one route is rendered at a time */}
           <Switch>
             {/* Route for home page - exact means it only matches exactly "/" */}
