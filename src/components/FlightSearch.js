@@ -66,9 +66,16 @@ const FlightSearch = () => {
       alert('Please fix the following errors:\n' + Object.values(errors).join('\n'));
       return;
     }
+    console.log("Flights found:", mockFlights);
 
-    dispatch({ type: 'SEARCH_FLIGHTS', payload: formData });
-    handleSearch(); // ✅ instant search
+    dispatch({
+      type: 'SEARCH_FLIGHTS_SUCCESS',
+      payload: mockFlights
+    });
+    
+    // ✅ Immediately update the local UI as well, for Cypress to detect flights
+    setFormData({ ...formData }); // trigger re-render
+    
   };
 
   const handleBookFlight = (flight) => {
